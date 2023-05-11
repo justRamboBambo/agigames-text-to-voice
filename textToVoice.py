@@ -30,6 +30,7 @@ def write_ftp(name):
     #except error_perm <- exception from ftplib library, sys.exit()
     except error_perm:
         print("Unsuccessful connection")
+        os.remove(name)
         sys.exit("Unsuccessful connection")
 
     #if no error
