@@ -18,6 +18,8 @@ def main():
         bar.next()
         print()
     bar.finish()
+    requests.get("https://agigames.cz/robot/vypsani_prijmeni_ktera_nejsou_zpracovana_do_audio_souboru.php")
+
 
 
 def write_ftp(name):
