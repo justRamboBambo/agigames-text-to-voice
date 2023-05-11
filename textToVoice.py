@@ -69,7 +69,8 @@ def get_list():
     content = response.content.decode('utf-8')
 
     #return the content split by lines
-    return content.splitlines()
+    list = content.splitlines()
+    return [x.strip()  for x in list]
 
 
 if __name__ == "__main__":
