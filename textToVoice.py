@@ -6,7 +6,8 @@ from progress.bar import Bar
 import os
 
 def main():
-    names = get_list()
+    url = "https://agigames.cz/apiout/vypsani_prijmeni_ktera_nejsou_zpracovana_do_audio_souboru.php"
+    names = get_list(url)
     
     #create a bar from Bar class imported from progress.bar
     bar = Bar("Processing ", max=len(names))
@@ -59,9 +60,7 @@ def text_to_speech(name):
     return filename
 
 #create a function using requests library that takes the list of names from php site and creates a list
-def get_list():
-
-    url = "https://agigames.cz/apiout/vypsani_prijmeni_ktera_nejsou_zpracovana_do_audio_souboru.php"
+def get_list(url):
 
     #create a response object from request.get(url)
     response = requests.get(url)
