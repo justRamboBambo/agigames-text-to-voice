@@ -6,7 +6,8 @@ from progress.bar import Bar
 import os
 
 def main():
-    url = "https://agigames.cz/apiout/vypsani_prijmeni_ktera_nejsou_zpracovana_do_audio_souboru.php"
+    # url = "https://agigames.cz/apiout/vypsani_prijmeni_ktera_nejsou_zpracovana_do_audio_souboru.php"
+    url = "https://agigames.cz/apiout/test_prijmeni.php"
     names = get_list(url)
     
     #create a bar from Bar class imported from progress.bar
@@ -72,7 +73,8 @@ def get_list(url):
 
     #return the content split by lines
     list = content.splitlines()
-    return [x.strip()  for x in list]
+    return [x.strip().replace(u'\ufeff', '')  for x in list]
+  
 
 
 if __name__ == "__main__":
