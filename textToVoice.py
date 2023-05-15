@@ -6,7 +6,7 @@ from progress.bar import Bar
 import os
 
 def main():
-    url = "https://agigames.cz/apiout/vypsani_prijmeni_ktera_nejsou_zpracovana_do_audio_souboru.php"
+    url = "https://agigames.cz/apiout/test_prijmeni.php"
     names = get_list(url)
     
     #create a bar from Bar class imported from progress.bar
